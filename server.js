@@ -18,10 +18,12 @@ app.use(routes);
 
 // Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/googlebooks",
+  process.env.MONGODB_URI || "mongodb+srv://sulada:Suwalee1991@cluster0.svqdz.mongodb.net/googlebooks?retryWrites=true&w=majority",
   {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
     useCreateIndex: true,
-    useNewUrlParser: true
+    useFindAndModify: false
   }
 );
 
